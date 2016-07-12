@@ -1,0 +1,78 @@
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1b1b1b;
+}
+.content-wrapper {
+    background-color: #325585;
+    min-height: 100%;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.3s;
+}
+body.open .content-wrapper {
+    transform: translate3d(-46px, 0, 0);
+}
+.content-wrapper .menu-btn {
+    display: block;
+    float: right;
+    color: #fff;
+    padding: 1.5em;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    margin-bottom: 0.5em;
+    list-style-type: none;
+}
+.menu a {
+    display: block;          /*2d装换transform：rotate（旋转），skew（扭曲），scale缩放,translate移动,matrix(矩阵变形)，过渡*/
+    text-decoration: none;   /*transition过渡：*/
+    color: #fff;
+    font-size: 1.5em;
+    padding: 0.5em; 
+    opacity: 0;   /*不透明度*/
+    transform: translate3d(48px, -48px, 0) scale(0);
+    transition: 0.4s 0.3s all;
+}
+body.open .menu a {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+}
+body.open .menu li:nth-child(0) a {
+    transition: 0.2s 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+}
+body.open .menu li:nth-child(1) a {
+    transition: 0.2s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+}
+body.open .menu li:nth-child(2) a {
+    transition: 0.2s 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+}
+body.open .menu li:nth-child(3) a {
+    transition: 0.2s 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+}
+body.open .menu li:nth-child(4) a {
+    transition: 0.2s 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+}
+body.open .menu li:nth-child(5) a {
+    transition: 0.2s 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+}
+body.open .menu li:nth-child(6) a {
+    transition: 0.2s 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+}
+}
+.nav-toggle.show-nav {
+    top: 12px;
+    right: 12px;
+}

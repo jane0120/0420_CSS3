@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style type="text/css">
+			body {
+    background-color: #E7E7E8;
+    display: -webkit-box;/* display 属性规定元素应该生成的框的类型。*/
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100vh;/* vh:相对于视窗的高度，那么vw:则是相对于视窗的宽度 */
+}
+.beer-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    -webkit-animation: jump 1.5s ease infinite;
+    animation: jump 1.5s ease infinite;
+}
+.beer {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes jump {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    10% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    10% {
+        -webkit-transform: translateY(-25px);
+        transform: translateY(-25px);
+    }
+    15% {
+        -webkit-transform: translateY(-25px);
+        transform: translateY(-25px);
+    }
+    25% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    35% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    35% {
+        -webkit-transform: translateY(-25px);
+        transform: translateY(-25px);
+    }
+    40% {
+        -webkit-transform: translateY(-25px);
+        transform: translateY(-25px);
+    }
+    50% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    60% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    60% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+    }
+    80% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+    }
+    90% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@keyframes jump {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    10% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    10% {
+        -webkit-transform: translateY(-25px);
+        transform: translateY(-25px);
+    }
+    15% {
+        -webkit-transform: translateY(-25px);
+        transform: translateY(-25px);
+    }
+    25% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    35% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    35% {
+        -webkit-transform: translateY(-25px);
+        transform: translateY(-25px);
+    }
+    40% {
+        -webkit-transform: translateY(-25px);
+        transform: translateY(-25px);
+    }
+    50% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    60% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    60% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+    }
+    80% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+    }
+    90% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    55% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    85% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    35% {
+        -webkit-transform: rotate(120deg);
+        transform: rotate(120deg);
+    }
+    75% {
+        -webkit-transform: rotate(240deg);
+        transform: rotate(240deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+		</style>
+		<title></title>
+	</head>
+	<body>
+		<div class="beer-wrap"><img src="img/beer.jpg" class="beer"/>
+</div>
+	</body>
+</html>

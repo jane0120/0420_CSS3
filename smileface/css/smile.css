@@ -1,0 +1,262 @@
+body {
+    background: #797;
+    overflow: hidden
+}
+.face {
+    transform: rotate(-15deg);
+    width: 256px;
+    height: 256px;
+    background-color: #dab444;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -128px 0 0 -128px;
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.35) inset;
+    animation: 10s head ease-in-out infinite;/*将动画绑定到face元素上
+    
+    * animation: myfirst 5s linear 2s infinite alternate;
+    * 简写动画：动画@keyframes名称，动画周期，动画速度曲线，动画播放次数，正反向播放
+    * @key是用来设置key  frame，关键帧
+    * @keyframes 规则用于创建动画。
+    * 在 @keyframes 中规定某项 CSS 样式，就能创建由当前样式逐渐改为新样式的动画效果。
+    * animation是
+    * 当您在 @keyframes 中创建动画时，请把它捆绑到某个选择器，否则不会产生动画效果。
+    * 
+    * */
+    transform-origin: bottom;
+    z-index: 3
+}
+.face.bw {
+    margin: -128px 0 0 -400px;
+    z-index: 2;
+    background: #fff;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    z-index: 1;
+    animation-delay: 0.3s
+}
+.face.bw * {
+    animation-delay: 0.3s
+}
+.face.bw .eyes i {
+    border: 1px solid #999;
+    box-sizing: border-box;
+    box-shadow: -8px -8px 8px rgba(0, 100, 200, 0.35) inset;
+    box-shadow: 0 16px 1px rgba(0, 0, 0, 0.35);
+}
+.face.bw .eyes i:before {
+    border: 3px solid #999
+}
+.face.bw .mouth {
+    background: #353535
+}
+.face.bw .mouth:before {
+    background: #454545
+}
+.face.contor * {
+    box-sizing: border-box;
+    animation-delay: 0.15s
+}
+.face.contor {
+    animation-delay: 0.15s;
+    margin: -128px 0 0 142px;
+    z-index: 2;
+    background: transparent;
+    box-sizing: border-box;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    z-index: 1;
+    box-shadow: none
+}
+.face.contor .eyes i {
+    background: transparent;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 12px 0px rgba(255, 255, 255, 0.5);
+}
+.face.contor .eyes i:before {
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    background: transparent
+}
+.face.contor .mouth {
+    background: transparent;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+}
+.face.contor .mouth:before {
+    background: rgba(255, 255, 255, 0.5)
+}
+.eyes {
+    position: absolute;
+    height: 1px;
+    width: 256px;
+    top: 50px;
+}
+.eyes i {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 16px 0;
+    border: 3px solid #dab000;
+    box-shadow: -8px -8px 8px rgba(0, 100, 200, 0.35) inset;
+    box-shadow: 0 16px 1px rgba(0, 50, 150, 0.15);
+    position: relative;
+    animation: 10s blink ease-in-out infinite
+}
+.eyes i:before {
+    position: absolute;
+    border: 3px solid #3bb4e5;
+    display: block;
+    content: "";
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    background: #000;
+    top: 16px;
+    left: 8px;
+    animation: 10s eyeballs ease-in-out infinite
+}
+.mouth {
+    height: 32px;
+    width: 128px;
+    background: #000;
+    position: absolute;
+    top: 160px;
+    border-radius: 32px;
+    left: 32px;
+    overflow: hidden;
+    animation: 10s mouth ease-in-out infinite
+}
+.mouth:before {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 24px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    background-color: rgba(150, 0, 0, 0.5);
+    border-radius: 24px 24px 0 0;
+    margin-left: -24px;
+}
+@keyframes eyeballs {
+    20% {
+        transform: translate(32px, 0px)
+    }
+    25% {
+        transform: translate(32px, 0px)
+    }
+    40% {
+        transform: translate(32px, 16px)
+    }
+    50% {
+        transform: translate(32px, 16px)
+    }
+    55% {
+        transform: translate(16px, -12px)
+    }
+    65% {
+        transform: translate(16px, -12px)
+    }
+    75% {
+        transform: translate(16px, -12px)
+    }
+    80% {
+        transform: translate(16px, 24px)
+    }
+    95% {
+        transform: translate(16px, 24px)
+    }
+}
+@keyframes blink {
+    0% {} 50% {
+        transform: translate(0px, 0)
+    }
+    60% {
+        transform: translate(48px, 0)
+    }
+    80% {
+        transform: translate(48px, 0)
+    }
+}
+@keyframes mouth {
+    0% {} 10% {
+        border-radius: 0 0 32px 32px;
+        height: 48px
+    }
+    15% {
+        height: 48px
+    }
+    20% {
+        height: 32px
+    }
+    45% {
+        border-radius: 0 0 32px 32px;
+    }
+    50% {
+        transform: translate(0px, 0);
+        height: 32px;
+        border-radus: 32px 32px 32px 32px
+    }
+    55% {
+        border-radius: 32px 32px 0 0;
+        height: 32px;
+    }
+    60% {
+        transform: translate(48px, 0);
+        height: 48px;
+        border-radius: 32px 32px 0 0;
+    }
+    80% {
+        transform: translate(48px, 0); /*水平和垂直方向的移动*/
+        height: 48px;
+        border-radius: 32px 32px 0 0; /*圆角边框*/
+    }
+    85% {
+        height: 32px;
+    }
+}
+@keyframes head {/*声明动画 
+	        transition: width 1s linear 2s;过渡属性名，过渡时间，时间曲线，默认开始时间
+	        ease逐渐变化，linear匀速，ease-in加速，ease-out减速，
+	        ease-in-out先加速后减速，cubic-bezier自定义贝塞尔曲线值
+	        perspective 属性定义 3D 元素距视图的距离*/
+    10% {
+        transform: scale(1)
+    }
+    13% {
+        transform: skewX(10deg);
+    }
+    16% {
+        transform: skewX(-5deg);/*单方向的扭曲变形，负值为逆时针*/
+    }
+    19% {
+        transform: skewX(0deg);/*xy轴同时按一定的角度进行扭曲变形*/
+    }
+    25% {
+        transform: scale(1);/*水平垂直方向的缩放*/
+    }
+    26% {
+        ;
+        transform-origin: bottom/*被旋转元素的位置*/
+    }
+    50% {
+        transform: rotate(-15deg);
+        transform-origin: bottom
+    }
+    60% {
+        transform: rotate(15deg)
+    }
+    80% {
+        transform: rotate(15deg)/*旋转15度*/
+    }
+}
+/*@media 可以针对不同的屏幕尺寸设置不同的样式*/
+@media (max-width: 740px) {/*文档宽度小于740像素则修改face样式*/
+    .face {
+        position: relative !important;
+        margin: 5px auto !important;
+        top: auto;
+        left: auto
+    }
+}
